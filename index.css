@@ -8,7 +8,8 @@
     body,
     input {
         font-family: "Poppins", sans-serif;
-        background: #e6dfdf;
+        background-color: #e6dfdf;
+        /* background-color: linear-gradient(120deg, #593535, #521818); */
     }
     /* input[type=text]:active {
     background: #a3a2a3;
@@ -70,13 +71,14 @@
     }
     
     .bms-icon:hover {
-        color: #4481eb;
-        border-color: #4481eb;
+        color: #522819;
+        border-color: #522819;
     }
     
     .btn {
         width: 150px;
-        background-color: #5995fd;
+        background-color: #522819;
+        background-image: linear-gradient(#522819, #1c0903);
         border: none;
         outline: none;
         height: 49px;
@@ -91,11 +93,12 @@
     }
     
     .btn:hover {
-        background-color: #4d84e2;
+        background-color: #330d00;
     }
     
     .btn:active {
         transform: scale(0.9);
+        background-image: linear-gradient( #1c0903, #522819);
     }
     /* .btn.ghost {
     background: transparent;
@@ -168,12 +171,14 @@
         width: 50%;
         z-index: 1;
         opacity: 0;
-        padding-top: 5%;
+        padding-top: 4%;
     }
     
     .panel {
-        background: #521818;
-        background: linear-gradient(to center, #593535, #521818) no-repeat 0 0 / cover;
+        /* background: #521818;
+        background: linear-gradient(to center, #593535, #521818) no-repeat 0 0 / cover; */
+        background: url(./bmsce2.jpg) no-repeat;
+        background-size: 100%;
         color: #fff;
         position: relative;
         left: -100%;
@@ -207,21 +212,56 @@
         transform: translateX(-20%);
     }
     
-    #remember {
-        padding-right: 40%;
-    }
+    #remember input {}
     
-    .psw {
+    #remember a {
+        padding-left: 3rem;
+        text-decoration: none;
+        color: #522819;
+    }
+    /* .psw {
         display: inline-block;
         width: 200px;
         margin-top: 10%;
         margin-left: 34%;
         border-radius: 5px;
         height: 30px;
+    } */
+    /* .adm {
+        margin-left: 3%;
+    } */
+    /* .input-field span::before {
+        content: attr(data-placeholder);
+        padding-bottom: 100rem;
+        margin-left: 4rem;
+    } */
+    
+    .right-panel .content a {
+        text-decoration: none;
+        color: #522819;
     }
     
-    .adm {
-        margin-left: 3%;
+    .right-panel .content a:hover,
+    #remember a:hover {
+        color: #330d00;
+        text-shadow: #333;
+        text-decoration: underline;
+    }
+    
+    #email_error,
+    #password_error {
+        color: red;
+        font-weight: 600;
+        display: none;
+    }
+    
+    #usn_error,
+    #cpassword_error,
+    #semail_error,
+    #spassword_error {
+        color: red;
+        font-weight: 600;
+        display: none;
     }
     /* animations */
     /* move log in to right */
